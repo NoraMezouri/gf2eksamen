@@ -8,23 +8,23 @@
 
     <link rel="stylesheet" href="stylesheets/style.css">
 
-    <meta name="theme-color" content="#eeeeee"/>
+    <meta name="theme-color" content="#eeeeee" />
 
     <link rel="manifest" href="manifest.json">
 
     <link rel="apple-touch-icon" href="icon512_rounded.png">
 
     <script>
-            // Check that service workers are registered
-            if ('serviceWorker' in navigator) {
-                console.log("Hi")
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('./service-worker.js');
-                });
-            }
+        // Check that service workers are registered
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js');
+            });
+        }
     </script>
 
+    <script src="validation.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             <figure class="logo">
                 <img src="assets/bObles-logo-hvid-png-300x125-2.png">
             </figure>
-            
+
             <nav class="menu">
                 <a class="bold uppercase" href="#mariehoene">Mariehøne</a>
                 <a class="bold uppercase" href="#blomst">Blomst</a>
@@ -46,7 +46,7 @@
             <section class="bannerText">
                 <h2>Nye produkter fra bobles</h2>
             </section>
-                
+
         </main>
 
 
@@ -124,11 +124,24 @@
         </footer>
     </div>
 
-<dialog>
-    <form>
-    
-    </form>
+    <section class="emailPop">
+
+        <form id="form">
+            <div class="emailInput">
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <button type="submit">Tilmeld Nyhedsbrev!</button>
+        </form>
+
+    </section>
+
+
+<dialog class="dialog" id="dialog">
+    <p id="modalText" class="modalText"></p>
+    <button id="closeButton" class="closeBtn">&#10006;</button>
 </dialog>
+
 </body>
 
 </html>
