@@ -7,6 +7,23 @@
     <title>Bobles</title>
 
     <link rel="stylesheet" href="stylesheets/style.css">
+
+    <meta name="theme-color" content="#eeeeee"/>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" href="icon512_rounded.png">
+
+    <script>
+            // Check that service workers are registered
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('./service-worker.js');
+                });
+            }
+    </script>
+
 </head>
 
 <body>
