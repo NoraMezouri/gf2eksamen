@@ -1,6 +1,14 @@
 {
     "theme_color": "#8936FF",
     "background_color": "#2EC6FE",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "bobles",
+    "purpose": "any maskable",
+    "short_name": "bobles",
+    "description": "An app for bobles",
+    
     "icons": [
         {
             "purpose": "maskable",
@@ -14,15 +22,5 @@
             "src": "icon512_rounded.png",
             "type": "image/png"
         }
-    ],
-    "orientation": "any",
-    "display": "standalone",
-    "dir": "auto",
-    "lang": "da",
-    "id": "bobles",
-    "description": "App for the bobles Website",
-    "start_url": "/",
-    "name": "Bobles",
-    "short_name": "Bobles",
-    "scope": "/"
+    ]
 }
