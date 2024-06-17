@@ -1,5 +1,6 @@
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 @font-face {
     font-family: 'Tuffy';
     src: url('../assets/Tuffy-Regular.woff2') format('woff2'),
@@ -9,6 +10,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Run';
     src: url('../assets/Run-Medium.woff2') format('woff2'),
@@ -18,25 +20,36 @@
     font-style: normal;
     font-display: swap;
 }
+
 /* Typografi */
-p,h1,h2,h3,a,p{
+p,
+h1,
+h2,
+h3,
+a,
+p {
     color: #fff;
 }
-h1,h2{
+
+h1,
+h2 {
     font-family: 'Run';
     letter-spacing: 0.05em;
     text-align: center;
     font-size: 20px;
     font-weight: 500;
 }
-h3{
+
+h3 {
     font-family: 'Lato';
     font-size: 16px;
 }
-p{
+
+p {
     font-family: 'Lato';
     font-weight: 400;
 }
+
 /*
 Farveskema 1:
     #bcb5af
@@ -51,63 +64,77 @@ Farveskema 2:
     #eedcb4
 */
 /*resets*/
-*{
+* {
     box-sizing: border-box;
 }
-html, body{
-    margin:0;
-    padding:0;
-    
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
 }
-img, video, svg{
+
+img,
+video,
+svg {
     max-width: 100%;
 }
 
-.bold{
+.bold {
     font-weight: 700;
 }
-.uppercase{
+
+.uppercase {
     text-transform: uppercase;
 }
-.lowercase{
+
+.lowercase {
     text-transform: lowercase;
 }
 
-.header, .footer{
-    background:  #30383a;
+.header,
+.footer {
+    background: #30383a;
 }
 
-.twoCol > *{
+.twoCol>* {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
+
 /* Header and menu */
 
-.header{
+.header {
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;}
-.menu a{
+    align-items: center;
+}
+
+.menu a {
     text-decoration: none;
     font-family: 'Tuffy';
     font-size: 13px;
     padding: 10px 20px;
 }
-.menu a:hover{
+
+.menu a:hover {
     color: #878787;
 }
-.logo{
+
+.logo {
     width: 80px;
 }
 
 /* Banner */
-.banner{
+.banner {
     position: relative;
 }
-.bannerText{
+
+.bannerText {
     position: absolute;
     bottom: 0;
     background: #bcb5af;
@@ -123,89 +150,103 @@ img, video, svg{
 /* 2 collums for the descriptions */
 
 /* Mariehoene and Blomst Section */
-.mariehoeneName, .mariehoeneDesc, .blomstName, .blomstDesc{
+.mariehoeneName,
+.mariehoeneDesc,
+.blomstName,
+.blomstDesc {
     padding: 20px 0px;
 }
-.mariehoeneDesc p, .blomstDesc p{
+
+.mariehoeneDesc p,
+.blomstDesc p {
     width: 50%;
 }
 
 /* Mariehoene section */
-.mariehoeneName{
+.mariehoeneName {
     background: #6f6f70;
 }
-.mariehoeneDesc{
+
+.mariehoeneDesc {
     background: #dbd3cc;
     box-sizing: border-box;
 }
 
 /* blomst Section */
-.blomstName{
-    background:#e3c3d0;
+.blomstName {
+    background: #e3c3d0;
 }
-.blomstDesc{
+
+.blomstDesc {
     background: #c07b8b;
 
 }
 
 /* Footer */
 
-.footer{
-    
+.footer {
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 20px;
 }
-.footer a{
+
+.footer a {
     color: #878787;
     font-family: 'Tuffy';
     font-size: 14px;
     text-decoration: none;
-    
+
 }
-.footerLists{
+
+.footerLists {
     width: 50%;
     display: flex;
     flex-direction: column;
 }
 
-@media screen and (min-width:720px){
+@media screen and (min-width:720px) {
     /*Styles for larger screens*/
 
-    h1,h2{
+    h1,
+    h2 {
         font-size: 2.7vw;
     }
 
     /* header and menu */
-    .header{
+    .header {
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
     }
-    .twoCol{
+
+    .twoCol {
         display: flex;
     }
-    .twoCol > *{
+
+    .twoCol>* {
         width: 50%;
     }
 
     /* footer */
-    .footer{
+    .footer {
         justify-content: center;
         padding-bottom: 200px;
     }
-    .footerLists{
-    width: auto;
-    margin-right: 5vw;
+
+    .footerLists {
+        width: auto;
+        margin-right: 5vw;
     }
-    .footerLists:last-of-type{
+
+    .footerLists:last-of-type {
         margin-right: 0;
     }
 }
 
 /* email! */
-.emailPop{
+.emailPop {
     max-width: 400px;
     min-height: 100px;
     background: #bcb5af;
@@ -216,37 +257,44 @@ img, video, svg{
     padding: 20px;
     box-shadow: 2px 2px 10px 2px rgba(60, 58, 70, 0.5);
 }
-.emailPop form{
+
+.emailPop form {
     display: flex;
     flex-direction: column;
     height: 60px;
     justify-content: space-between;
-    
+
 }
-.emailPop form input, .emailPop form button, .emailPop form label{
+
+.emailPop form input,
+.emailPop form button,
+.emailPop form label {
     border: 0;
     border-radius: 5px;
     padding: 3px;
     font-family: 'Lato';
 }
-.emailPop form button{
+
+.emailPop form button {
     padding: 6px 0;
     background: #6f6f70;
     color: #ffffff;
 }
 
 /* modal */
-.dialog{
+.dialog {
     border: 0;
     border-radius: 10px;
     overflow: visible;
     padding: 20px;
     box-shadow: 0 0 20px #000;
 }
-.modalText{
+
+.modalText {
     color: #30383a;
 }
-.closeBtn{
+
+.closeBtn {
     position: absolute;
     scale: 2;
     top: 0;
@@ -255,4 +303,46 @@ img, video, svg{
     color: #fff;
     border: 0;
     border-radius: 10px;
+}
+
+/* slider */
+.slide:first-of-type{
+    display: block;
+}
+.slide {
+    display: none;
+}
+
+/* image click for 3D modal */
+.imgSection img{
+    transition: 0.2s;
+}
+.imgSection img:hover{
+    filter: blur(10px);
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.imgSection{
+    overflow: hidden;
+    z-index: 2;
+}
+.imgSection a{
+width: 100%;
+margin: 0;
+position: relative;
+}
+.imgSection a p{
+    color: transparent;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -100%);
+    position: absolute;
+    font-size: 32px;
+    transition: 0.2s;
+}
+.imgSection a:hover p{
+    transition: 0.2s;
+    color: #fff;
+    pointer-events: none;
 }

@@ -24,7 +24,11 @@
         }
     </script>
 
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
     <script src="validation.js" defer></script>
+    <script src="img_slider.js" defer></script>
+    <script src="modalFor3D.js" defer></script>
 </head>
 
 <body>
@@ -41,8 +45,15 @@
                 <a class="bold uppercase" href="#blomst">Blomst</a>
             </nav>
         </header>
-        <main class="banner">
+        <main class="banner slide">
             <img src="assets/banner.jpg" alt="To børn som leger">
+            <section class="bannerText">
+                <h2>Nye produkter fra bobles</h2>
+            </section>
+
+        </main>
+        <main class="banner slide">
+            <img src="assets/banner2.jpg" alt="To børn som leger">
             <section class="bannerText">
                 <h2>Nye produkter fra bobles</h2>
             </section>
@@ -67,8 +78,14 @@
 
 
         <section class="imgSection twoCol">
-            <img src="assets/elephant_grey.jpg" alt="">
-            <img src="assets/elephant_rose.jpg" alt="">
+            <a onclick="modal(this)" href="#grey_MH">
+                <p class="bold">Klik her for at se mere!</p>
+                <img src="bobles_models/grey_MH.png" alt="">
+            </a>
+            <a onclick="modal(this)" href="#grey_MH">
+                <p class="bold">Klik her for at se mere!</p>
+                <img src="bobles_models/red_MH.png" alt="">
+            </a>
         </section>
 
 
@@ -90,8 +107,8 @@
             </section>
 
             <section class="imgSection twoCol">
-                <img src="assets/mixed-stepstones_rose.jpg" alt="">
-                <img src="assets/mixed-stepstones_grey.jpg" alt="">
+                <img src="bobles_models/red_B.png" alt="">
+                <img src="bobles_models/grey_B.png" alt="">
             </section>
         </section>
 
@@ -137,11 +154,21 @@
     </section>
 
 
-<dialog class="dialog" id="dialog">
-    <p id="modalText" class="modalText"></p>
-    <button id="closeButton" class="closeBtn">&#10006;</button>
-</dialog>
+    
+
+
+    <div class="modal-content" style="display:none;">
+        <section id="grey_MH">
+            <h2>Korsbæk bio</h2>
+        </section>
+    </div>
+    
+    
+    <dialog class="modal" id="modal">
+        <section id="modalInner" class="modalInner">
+        </section>
+        <button id="closeButton" class="closeBtn">&#10006;</button>
+    </dialog>
 
 </body>
-
 </html>
