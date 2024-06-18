@@ -192,6 +192,7 @@ svg {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 20px;
+    padding-bottom: 150px;
 }
 
 .footer a {
@@ -321,12 +322,12 @@ svg {
 
 /* image click for 3D modal */
 .imgSection img{
-    transition: 0.2s;
+    transition: 0.5s;
 }
 .imgSection img:hover{
-    filter: blur(10px);
-    transform: scale(1.1);
-    transition: 0.2s;
+    filter: blur(2px);
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 .imgSection{
     overflow: hidden;
@@ -345,12 +346,14 @@ position: relative;
     transform: translate(-50%, -100%);
     position: absolute;
     font-size: 32px;
-    transition: 0.2s;
+    transition: 0.4s;
+    
 }
 .imgSection a:hover p{
-    transition: 0.2s;
+    transition: 0.4s;
     color: #fff;
     pointer-events: none;
+    text-shadow: 0 0 10px #000;
 }
 /* Model styling */
 model-viewer{
