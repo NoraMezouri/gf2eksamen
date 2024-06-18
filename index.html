@@ -29,6 +29,8 @@
     <script src="validation.js" defer></script>
     <script src="img_slider.js" defer></script>
     <script src="modalFor3D.js" defer></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
+        defer></script>
 </head>
 
 <body>
@@ -78,11 +80,11 @@
 
 
         <section class="imgSection twoCol">
-            <a onclick="modal(this)" href="#grey_MH">
+            <a href="#grey_MH" onclick="modalOpen(this)">
                 <p class="bold">Klik her for at se mere!</p>
                 <img src="bobles_models/grey_MH.png" alt="">
             </a>
-            <a onclick="modal(this)" href="#grey_MH">
+            <a onclick="modalOpen(this)" href="#red_MH">
                 <p class="bold">Klik her for at se mere!</p>
                 <img src="bobles_models/red_MH.png" alt="">
             </a>
@@ -107,8 +109,14 @@
             </section>
 
             <section class="imgSection twoCol">
-                <img src="bobles_models/red_B.png" alt="">
-                <img src="bobles_models/grey_B.png" alt="">
+                <a href="#red_blomst" onclick="modalOpen(this)">
+                    <p class="bold">Klik her for at se mere!</p>
+                    <img src="bobles_models/red_B.png" alt="">
+                </a>
+                <a href="#grey_blomst" onclick="modalOpen(this)">
+                    <p class="bold">Klik her for at se mere!</p>
+                    <img src="bobles_models/grey_B.png" alt="">
+                </a>
             </section>
         </section>
 
@@ -143,7 +151,7 @@
 
     <section class="emailPop">
 
-        <form id="form">
+        <form id="form" class="form">
             <div class="emailInput">
                 <label for="email">E-mail:</label>
                 <input type="text" name="email" id="email">
@@ -154,21 +162,46 @@
     </section>
 
 
-    
+
 
 
     <div class="modal-content" style="display:none;">
+
         <section id="grey_MH">
-            <h2>Korsbæk bio</h2>
+            <model-viewer alt="" src="models/grey-mh.glb" auto-rotate ar shadow-intensity="1" camera-controls
+                touch-action="pan-y"></model-viewer>
         </section>
+        <section id="red_MH">
+            <model-viewer alt="" src="models/red-mh.glb" auto-rotate ar shadow-intensity="1" camera-controls
+                touch-action="pan-y"></model-viewer>
+        </section>
+        <section id="grey_blomst">
+            <model-viewer alt="" src="models/grey-blomst.glb" auto-rotate ar shadow-intensity="1" camera-controls
+                touch-action="pan-y"></model-viewer>
+        </section>
+        <section id="red_blomst">
+            <model-viewer alt="" src="models/red_blomst.glb" auto-rotate ar shadow-intensity="1" camera-controls
+                touch-action="pan-y"></model-viewer>
+        </section>
+
+
+
+
     </div>
-    
-    
+
+
     <dialog class="modal" id="modal">
         <section id="modalInner" class="modalInner">
         </section>
-        <button id="closeButton" class="closeBtn">&#10006;</button>
+        <button id="close-modal" class="close-modal" onclick="closeModal()">&#10006;</button>
+    </dialog>
+    
+    <dialog class="emailModal" id="emailModal">
+        <section id="emailModalInner" class="emailModalInner">
+        </section>
+        <button id="emailCloseModal" class="emailCloseModal" onclick="emailCloseModal()">&#10006;</button>
     </dialog>
 
 </body>
+
 </html>

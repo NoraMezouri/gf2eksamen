@@ -3,11 +3,12 @@
 const modalElement = document.querySelector("#modal")
 const modalInner = document.querySelector("#modalInner")
 
+console.log("hello there!")
 
 //Deklaration af modal funktionen linkElement referer til
 //til this = elementet selv, der blev sat som parameter, da
 //funktionen blev kaldt i onclick attributten i HTML koden 
-function modal(linkElement){
+function modalOpen(linkElement){
 
     //Vi gemmer linkets href værdi i en midlertidig variabel
     let link = linkElement.getAttribute("href")
