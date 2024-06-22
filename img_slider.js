@@ -14,13 +14,9 @@ function showSlides(num){
         slideIndex = slides.length
     }
 
-    slides.forEach(function(element, index){
+    slides.forEach(function(element){
         element.style.display = "none"
     })
     slides[slideIndex - 1].style.display = "block"
 
-}
-
-function currentSlide(number){
-    showSlides( slideIndex = number)
 }
